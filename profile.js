@@ -13,10 +13,16 @@ document.querySelectorAll('.profile > .options > .option').forEach((elm, key) =>
 })
 
 document.querySelector('#edit-roles').addEventListener('click', (e) => {
-    document.querySelector('.role-picker').style = "display: grid;"
+    document.querySelector('.role-picker').style = "opacity: 1; visibility: visible; transition: 0.3s;"
     document.querySelector('.profile-fade').style = "display: block;"
     document.querySelector('body').style = "overflow: hidden;"
-})
+});
+
+document.querySelector('.profile-fade').addEventListener('click', (e) => {
+    document.querySelector('.role-picker').style = "visibility: hidden; opacity: 0;";
+    document.querySelector('.profile-fade').style = "display: none;"
+    document.querySelector('body').style = "overflow: auto;"
+});
 
 document.querySelector('.role-picker > .expand').addEventListener('click', (e) => {
     document.querySelector('.role-picker > .body').style = "max-height: 3000px; transition: 1.3s";

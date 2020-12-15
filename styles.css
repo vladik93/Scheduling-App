@@ -633,7 +633,9 @@ button {
     background-color: #2E2F2F;
     color: #CDDDDD;
     padding: 3%;
-    display: none;
+    display: grid;
+    visibility: hidden;
+    opacity: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     margin: auto;
