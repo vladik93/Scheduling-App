@@ -617,10 +617,82 @@ button {
 */
 }
 
+.profile .profile-editor {
+    position: fixed;
+    z-index: 1000;
+    background-color: #2E2F2F;
+    color: #CDDDDD;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    width: 90%;
+    height: 75%;
+    top: 5%;
+    bottom: 5%;
+    border-radius: 3%;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    margin: auto;
+    visibility: hidden;
+    opacity: 0;
+
+    /* visibility: none;
+    opacity: 0; */
+}
+
+.profile .profile-editor > .body {
+    overflow: scroll;
+    display: flex;
+    margin-bottom: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 0.5px solid #ACBDBA;
+    border-bottom: 0.5px solid #ACBDBA;
+}
+
+.profile .profile-editor > .body > .detail {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0;
+}
+
+.profile .profile-editor > .body > .detail > input {
+    padding: 5%;
+}
+
+.profile .profile-editor > .body > .detail > label {
+    margin-bottom: 5%;
+}
+
+.profile .profile-editor > .footer > button {
+    width: 100%;
+    padding: 5%;
+    /* border: 1px solid #A599B5; */
+    border-radius: 5px;
+    background-color: #ACBDBA;
+    /* text-shadow: 1px 1px 1px #2E2F2F; */
+    font-size: 1.1rem;
+    color: #2E2F2F;
+    font-weight: bold;
+    /* box-shadow:; */
+}
+
+
+#profile-fade {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
 
 .profile .role-picker {
     position: fixed;
-    z-index: 300;
+    z-index: 1000;
     width: 90%;
     height: 75%;
     /* height: max-content; */
@@ -692,7 +764,7 @@ button {
     
 }
 
-.profile-fade {
+#role-fade {
     display: none;
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -700,6 +772,8 @@ button {
     width: 100%;
     z-index: 100;
 }
+
+
 
 
 /* .role-modal > .role-picker {

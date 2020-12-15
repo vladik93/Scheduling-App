@@ -12,15 +12,28 @@ document.querySelectorAll('.profile > .options > .option').forEach((elm, key) =>
     })
 })
 
+document.querySelector('#edit-profile').addEventListener('click', (e) => {
+    document.querySelector('.profile-editor').style = "opacity: 1; visibility: visible; transition: 0.3s;"
+    document.querySelector('#profile-fade').style = "display: block;"
+    document.querySelector('body').style = "overflow: hidden;"
+    
+});
+
+document.querySelector('#profile-fade').addEventListener('click', (e) => {
+    document.querySelector('.profile-editor').style = "visibility: hidden; opacity: 0;";
+    document.querySelector('#profile-fade').style = "display: none;"
+    document.querySelector('body').style = "overflow: auto;"
+});
+
 document.querySelector('#edit-roles').addEventListener('click', (e) => {
     document.querySelector('.role-picker').style = "opacity: 1; visibility: visible; transition: 0.3s;"
-    document.querySelector('.profile-fade').style = "display: block;"
+    document.querySelector('#role-fade').style = "display: block;"
     document.querySelector('body').style = "overflow: hidden;"
 });
 
-document.querySelector('.profile-fade').addEventListener('click', (e) => {
+document.querySelector('#role-fade').addEventListener('click', (e) => {
     document.querySelector('.role-picker').style = "visibility: hidden; opacity: 0;";
-    document.querySelector('.profile-fade').style = "display: none;"
+    document.querySelector('#role-fade').style = "display: none;"
     document.querySelector('body').style = "overflow: auto;"
 });
 

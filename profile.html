@@ -75,9 +75,8 @@
                 </ul>
             </div>            
         </div>
-        <div class="profile-fade">
-           
-        </div>
+        <div id="profile-fade"></div>
+        <div id="role-fade"></div>
         <div class="profile">
             <div class="avatar">
                 <img src="./images/profile1.jpg" />
@@ -112,8 +111,38 @@
                                 <p>Israel, Ashdod</p>
                             </li>
                         </ul>
-                        <button>Edit Profile</button>
+                        <button id="edit-profile">Edit Profile</button>
                     </div>
+                    <form class="profile-editor">
+                        <div class="header">
+                            <h1>Edit Profile</h1>
+                        </div>
+                        <div class="body">
+                            <div class="detail">
+                                <label><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" />
+                            </div>
+                            <div class="detail">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="text" />
+                            </div>
+                            <div class="detail">
+                                <label><i class="fas fa-envelope"></i> Email</label>
+                                <input type="text" />
+                            </div>
+                            <div class="detail">
+                                <label> <i class="fas fa-compass"></i> Country & City</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <!-- <button >Select</button> -->
+                        </div>
+
+
+
+
+                    </form>
                     <!-- <i class="fas fa-chevron-down"></i> -->
                 </div>
                 <div class="option" id="roles">
