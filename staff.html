@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/8f8b7ddf59.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="title">
+                <p><span style="font-weight: bold;">MyApp</span> - Schedule App</p>
+            </div>
+            <div class="actions">
+                <a href="./staff.js"><i class="fas fa-users"></i></a>
+                <a><i class="fas fa-calendar-week"></i></a>
+                <a><i class="fas fa-calendar-week"></i></a>
+                <a><i class="fas fa-user"></i></a>
+            </div>
+            <div class="expand">
+                <button><i class="fas fa-align-justify"></i></button>
+            </div>
+            <div class="collapse">
+                <button><i class="fas fa-times"></i></button>
+            </div>
+             <div class="expand-panel">
+                <ul>
+                    <li>
+                       <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 1</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 2</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 3</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 4</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 5</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="staff">
+            <div class="worker">
+                <img src="./images/profile1.jpg" class="image" />
+                <div class="content">
+                    <table class="worker-table">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Morning</th>
+                                <th>Evening</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">S</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">M</td>
+                                <td>08:00 - 14:00</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">T</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">W</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">Th</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">F</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td class="day">Sa</td>
+                                <td>Open</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <i class="fas fa-sort-down expand-icon"></i>
+                <i class="fas fa-sort-up collapse-icon"></i>
+            </div>
+            <div class="worker">
+                <img src="./images/profile2.jpg" class="image" style="background: rgba(0, 0, 0, 0);" />
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, voluptatem sed nihil et beatae eveniet tenetur nostrum aliquam fugit. Quidem iure ea expedita molestiae laborum repudiandae ab vero earum! Dignissimos voluptate quasi corporis.</p>
+                <i class="fas fa-sort-down expand-icon"></i>
+                <i class="fas fa-sort-up collapse-icon"></i>
+            </div>
+            <div class="worker pending">
+                <img src="./images/profile3.jpg" class="image" />
+                
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusamus ipsa. Dignissimos dolorum, nulla repellat veritatis inventore debitis itaque perferendis quam temporibus.s</p>
+                <i class="fas fa-sort-down expand-icon"></i>
+                <i class="fas fa-sort-up collapse-icon"></i>
+            </div>
+            <div class="worker">
+                <img src="./images/profile4.jpg" />
+                <i class="fas fa-sort-down"></i>
+            </div>
+            <div class="worker">
+                <img src="./images/profile5.jpg" />
+                <i class="fas fa-sort-down"></i>
+            </div>
+            <div class="worker">
+                <img src="./images/profile6.jpg" />
+                <i class="fas fa-sort-down"></i>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="to-top">
+                <div>To Top</div>
+            </div>
+            <div class="social">
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-instagram"></i></button>
+                <button><i class="fab fa-whatsapp"></i></button>
+                <button><i class="fab fa-youtube"></i></button>
+            </div>
+            <div class="actions">
+                <p>FAQ</p>
+                <p>Terms & Conditions</p>
+                <p>Contact</p>
+                <p>About</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./navbar.js"></script>
+    <script src="./staff.js"></script>
+    <!-- <script src="./modal.js"></script> -->
+</body>
+</html>

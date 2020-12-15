@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/8f8b7ddf59.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="title">
+                <p><span style="font-weight: bold;">MyApp</span> - Schedule App</p>
+            </div>
+            <div class="actions">
+                <a href="./staff.html"><i class="fas fa-users"></i></a>
+                <a><i class="fas fa-calendar-week"></i></a>
+                <a><i class="fas fa-calendar-week"></i></a>
+                <a><i class="fas fa-user"></i></a>
+            </div>
+            <div class="expand">
+                <button><i class="fas fa-align-justify"></i></button>
+            </div>
+            <div class="collapse">
+                <button><i class="fas fa-times"></i></button>
+            </div>
+             <div class="expand-panel">
+                <ul>
+                    <li>
+                       <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 1</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 2</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 3</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 4</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="option">
+                            <i class="fas fa-toolbox"></i>&nbsp;
+                            <p>Option 5</p>
+                       </div>
+                       <div class="expand">
+                            <i class="fas fa-chevron-down"></i>
+                       </div>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+        <div class="profile-fade">
+           
+        </div>
+        <div class="profile">
+            <div class="avatar">
+                <img src="./images/profile1.jpg" />
+                <h2 style="color: #CDDDDD;">Serah Tonin</h2>
+            </div>
+            <div class="actions">
+                <button>CALL</button>
+                <button>SEND MESSAGE</button>
+            </div>
+            <div class="options">
+                <div class="option" id="profile">
+                    <div class="label">
+                        <i class="fas fa-user"></i>
+                        <p>Profile</p>
+                    </div>
+                    <div class="expanded">
+                        <ul>
+                            <li>
+                                <i class="fas fa-user"></i>
+                                <p>Serah Tonin</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <p>02-111-2441</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <p>serah@mail.com</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-compass"></i>
+                                <p>Israel, Ashdod</p>
+                            </li>
+                        </ul>
+                        <button>Edit Profile</button>
+                    </div>
+                    <!-- <i class="fas fa-chevron-down"></i> -->
+                </div>
+                <div class="option" id="roles">
+                    <div class="label">
+                        <i class="fas fa-user"></i>
+                        <p>Roles</p>
+                    </div>
+                    <div class="expanded">
+                        <ul>
+                            <li>Supervisor</li>
+                            <li>Barista</li>
+                            <li>Cook</li>
+                            <li>Chef Manager</li>
+                        </ul>
+                        <button id="edit-roles">Edit Roles</button>
+                    </div>
+                    <!-- <div class="role-modal"> -->
+                        <form class="role-picker">
+                            <div class="header">
+                                <h1>Pick Roles</h1>
+                            </div>
+                            <div class="body">
+                                <div class="role">
+                                    <input type="checkbox" id="supervisor" />
+                                    <label for="supervisor">Supervisor</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Chef Manager</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Cashier</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Barista</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" id="supervisor" />
+                                    <label for="supervisor">Supervisor</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Chef Manager</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Cashier</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Barista</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Chef Manager</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Cashier</label>
+                                </div>
+                                <div class="role">
+                                    <input type="checkbox" />
+                                    <label>Barista</label>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button >Select</button>
+                            </div>
+                        </form>
+                    <!-- </div> -->
+                </div>
+                <div class="option">
+                    <div class="label">
+                        <i class="fas fa-phone"></i>
+                        <p>Shifts</p>
+                    </div>
+                    <!-- <i class="fas fa-chevron-down"></i> -->
+                </div>
+                <div class="option">
+                    <div class="label">
+                        <i class="fas fa-phone"></i>
+                        <p>Messages</p>
+                    </div>
+                    <!-- <i class="fas fa-chevron-down"></i> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="to-top">
+                <div>To Top</div>
+            </div>
+            <div class="social">
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-instagram"></i></button>
+                <button><i class="fab fa-whatsapp"></i></button>
+                <button><i class="fab fa-youtube"></i></button>
+            </div>
+            <div class="actions">
+                <p>FAQ</p>
+                <p>Terms & Conditions</p>
+                <p>Contact</p>
+                <p>About</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./navbar.js"></script>
+    <script src="./profile.js"></script>
+</body>
+</html>

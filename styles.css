@@ -1,0 +1,744 @@
+/*
+  Rich Black - #051014
+  Jet - #2E2F2F
+  Glossy Grape - #A599B5
+  Ash Gray - #ACBDBA
+  Gainsboro - #CDDDDD
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #CDDDDD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.navbar {
+    background-color: #2E2F2F;
+    height: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 5%; */
+    border-bottom: 2px solid #CDDDDD;
+}
+
+.navbar > .title {
+    display: flex;
+    color: #CDDDDD;
+    background-color: #051014;
+    justify-content: center;
+}
+
+
+.expand-panel {
+    display: flex;
+    display: none;
+    color: #CDDDDD;
+    flex: 1;
+
+
+}
+
+.expand-panel > ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.expand-panel > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.expand-panel > ul > li > .option {
+    display: flex;
+    align-items: center;    
+    justify-content: space-evenly;
+}
+
+
+
+.navbar > .expand {
+    display: flex;
+}
+
+.navbar > .expand > button {
+    font-size: 2.5rem;
+    color: #CDDDDD;
+    
+}
+
+.navbar > .collapse {
+    display: none;
+    align-items: center;
+    border-top: 0.5px dashed #CFD2CD;
+    border-bottom: 0.5px dashed #CFD2CD;
+}
+
+.navbar > .collapse > button {
+    font-size: 2.5rem;
+    color: #E3E4DB;
+    
+}
+
+.navbar > .actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0.5rem;
+}
+
+.navbar > .actions > a {
+    font-size: 1.5rem;
+    color: #CDDDDD;
+} 
+
+.calendar {
+    display: grid;
+    align-items: center;
+    /* padding: 3%; */
+}
+
+.calendar > .month-picker {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.calendar > .board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 75px;
+    justify-items: center;
+    align-items: flex-start;
+    color: #CFD2CD;
+    text-shadow: 1px 1px 3px #051014;
+}
+
+.calendar >.board > div, .board > a {
+    padding: 0.3rem;
+    
+}
+
+
+.calendar > .board > a:nth-child(n+15):nth-child(-n+21){
+    color: #051014;
+    text-decoration: none;
+    
+    
+}
+
+.calendar > .days {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid #CFD2CD;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+}
+
+.calendar > .month-picker > button {
+    color: #A599B5;
+    font-size: 3.5rem;
+}
+
+.schedule { 
+    display: grid;
+    align-items: center;
+    position: relative;
+    /* padding: 3%; */
+}
+
+.schedule > .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    color: #A599B5;
+    text-shadow: 1px 1px 3px #051014;
+}
+
+.schedule > .day > .dates > a:nth-child(1) {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.schedule > .day > .day-name {
+    display: flex;
+}
+
+.schedule > .profiles {
+    /* height: 100%; */
+    overflow: hidden; 
+    max-height: 215px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.schedule > .profiles > .profile {
+    display: flex;
+    box-shadow: 1px 1px 2px #2E2F2F;
+}
+
+.schedule > .profiles > .profile > img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.schedule > .expand-profiles {
+    display: flex;
+    justify-content: center;
+    /* color: green; */
+}
+
+.schedule > .expand-profiles > button {
+    font-size: 2.3rem;
+    color: #2E2F2F;
+    text-shadow: 1px 1px 3px #051014;
+}
+
+.schedule > .expand-profiles > #collapse {
+    display: none;
+}
+
+.schedule > .shift {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.schedule > .shift > button {
+    font-size: 3.5rem;
+}
+
+.schedule > .picker {
+    display: flex;
+    justify-content: center;
+}
+
+
+.schedule > .shift > button {
+    color: #A599B5;
+    text-shadow: 1px 1px 3px #051014;
+}
+
+.schedule > .picker {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.schedule > .picker > button {
+    font-size: 4rem;
+    color: #051014;
+}
+
+.schedule > .selected-panel {
+    background-color: #ACBDBA;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px , 1fr));
+    margin-bottom: 5%;
+    justify-items: stretch;
+    gap: 5%;
+    align-items: center;
+    padding: 5%;
+}
+
+.schedule > .selected-panel > .selected {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #CDDDDD;
+    color: #A599B5;
+    text-shadow: 1px 1px 3px #051014;
+}
+
+.schedule > .selected-panel > .selected > img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 2px #2E2F2F;
+}
+
+.page-mask {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.time-picker  {
+    width: 85%;
+    height: 53%;
+    background-color: #2E2F2F;
+    border-radius: 3%;
+    z-index: 200;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    padding: 3%;
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 0.3fr 0.3fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10%;
+    box-shadow: 3px 3px 3px #000;
+}
+
+.time-picker > * {
+    box-sizing: border-box;
+    background-color: #CDDDDD;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10%;
+    font-size: 1.5rem;
+}
+
+.time-picker button {
+    background-color: #A599B5;
+    padding: 20px;
+}
+
+.time-picker .up {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    box-shadow: 0px 3px 3px black;
+}
+
+.time-picker .down {
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    box-shadow: 0px 1px 5px black inset;
+}
+
+.time-picker > .actions {  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.time-picker > .set-button {
+    display: grid;
+    grid-column: 1/3;
+    border-radius: 5%;
+    justify-content: center;
+    box-shadow: 0px 3px 3px black;    
+}
+
+.time-picker > .reset-button {
+    font-size: 1rem;
+    color: #CDDDDD;
+    font-weight: bold;
+    background: none;
+    padding: 5%;
+    display: flex;
+    justify-self: flex-start;
+    width: max-content;
+
+}
+
+.staff {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 3%;
+    align-items: center;
+    position: relative;
+    /* padding: 2%; */
+}
+
+.staff > .worker > img {
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.staff > .worker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff > .worker > i {
+    font-size: 1.5rem;
+}
+
+.staff > .worker > .content {
+    height: 0;
+    overflow: hidden;
+    display: none;
+    border-spacing: 20px;
+    width: 100%;
+    
+}
+
+.staff > .pending {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+
+.worker-table {
+    border-collapse: collapse;
+    
+}
+
+.worker-table > thead > tr {
+    color: #CDDDDD;
+    background-color:#051014;
+    text-align: left;
+}
+
+.worker-table th, 
+.worker-table td {
+    padding: 3% 3%;
+}
+
+.worker-table .day {
+    font-weight: bold;
+}
+
+.worker-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.worker-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+.staff > .worker > .collapse-icon {
+    display: none;
+}
+
+.profile {
+    display: grid;
+    align-content: center;
+    position: relative;
+    /* padding: 3%; */
+}
+
+.profile > .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #051014;
+    border-bottom: 1px solid #CFD2CD;
+
+    /*
+  Rich Black - #051014
+  Jet - #2E2F2F
+  Glossy Grape - #A599B5
+  Ash Gray - #ACBDBA
+  Gainsboro - #CDDDDD
+*/
+
+}
+
+.profile > .avatar > img {
+    height: 100%;
+    width: 100%;
+    /* margin: auto; */
+    /* border-radius: 5%; */
+    object-fit: cover;
+}
+
+.profile > .actions {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.profile > .actions > button {
+    width: 100%;
+    padding: 10% 10%;
+    margin: 0;
+    font-weight: bold;
+}
+
+.profile > .actions > button:nth-child(1) {
+    background:#2E2F2F;
+    color: #CDDDDD;
+}
+
+.profile > .actions > button:nth-child(2) {
+    /* background: #A599B5; */
+    border-top: 1px solid #A599B5;
+    border-bottom: 1px solid #A599B5;
+
+    /*
+  Rich Black - #051014
+  Jet - #2E2F2F
+  Glossy Grape - #A599B5
+  Ash Gray - #ACBDBA
+  Gainsboro - #CDDDDD
+*/
+}
+
+.profile > .actions > button:nth-child(1) {
+    background:   #2E2F2F;
+}
+
+.profile > .options {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profile > .options > .option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 0.5px dashed #2E2F2F;
+    padding: 5%;
+}
+
+.profile > .options > .option:last-child {
+    border: none;
+}
+
+.profile > .options > .option > .label {
+    display: flex;
+    align-items: baseline;
+}
+
+.profile > .options > .option > .label > i {
+    margin-right: 10%;
+}
+
+.profile > .options > .option > i {
+    display: flex;
+    align-items: center;
+}
+
+.profile > .options > .option > .expanded {
+    height: 100%;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.profile > .options > .option > .expanded > ul {
+    padding: 5%;
+    margin: 0;
+    list-style: none;
+}
+
+.profile > .options > #profile > .expanded > ul {
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+.profile > .options > #profile > .expanded > ul > li {
+    margin: 8% 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.profile > .options > #profile > .expanded > ul > li > i {
+    margin-right: 5%;
+}
+
+.profile > .options > #roles {
+    position: relative;
+}
+
+.profile > .options > #roles .expanded > ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profile > .options > #roles .expanded > ul > li {
+    padding: 5% 0;
+}
+
+.profile > .options > #roles .expanded > ul > li::after {
+    content: " /";
+    color: #A599B5;
+}
+
+.profile > .options > .option > .expanded > button {
+    width: 100%;
+    padding: 5%;
+    /* border: 1px solid #A599B5; */
+    border-radius: 5px;
+    background-color: #ACBDBA;
+    /* text-shadow: 1px 1px 1px #2E2F2F; */
+    font-size: 1.1rem;
+    color: #2E2F2F;
+    font-weight: bold;
+    /* box-shadow:; */
+
+        /*
+  Rich Black - #051014
+  Jet - #2E2F2F
+  Glossy Grape - #A599B5
+  Ash Gray - #ACBDBA
+  Gainsboro - #CDDDDD
+*/
+}
+
+
+.profile .role-picker {
+    position: fixed;
+    z-index: 300;
+    width: 90%;
+    height: 75%;
+    /* height: max-content; */
+    /* overflow: scroll; */
+    left: 50%;
+    top: 5%;
+    bottom: 5%;
+    border-radius: 3%;
+    transform: translateX(-50%);
+    background-color: #2E2F2F;
+    color: #CDDDDD;
+    padding: 3%;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    margin: auto;
+
+    
+}
+
+/* .role-picker > .header {
+    border-bottom: 1px solid #ACBDBA;
+}
+
+.role-picker > .footer {
+    border-top:
+} */
+
+.role-picker > .footer > button {
+    width: 100%;
+    padding: 5%;
+    /* border: 1px solid #A599B5; */
+    border-radius: 5px;
+    background-color: #ACBDBA;
+    /* text-shadow: 1px 1px 1px #2E2F2F; */
+    font-size: 1.1rem;
+    color: #2E2F2F;
+    font-weight: bold;
+    /* box-shadow:; */
+}
+
+.role-picker > .body > .role {
+    margin: 10% 0;
+}
+
+.role-picker > .body > .role > input[type=checkbox] {
+    transform: scale(2.0);
+}
+
+.role-picker > .body {
+    overflow: scroll;
+    /* height: 100%; */
+    /* max-height: 330px; */
+    display: flex;
+    margin-bottom: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 0.5px solid #ACBDBA;
+    border-bottom: 0.5px solid #ACBDBA;
+}
+
+
+
+
+.role-picker > .footer {
+    display: flex;
+    
+}
+
+.profile-fade {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/* .role-modal > .role-picker {
+   display: flex;
+   flex-direction: column;
+   grid-template-rows: auto 1fr auto;
+} */
+
+
+.footer {
+    background-color: #2E2F2F;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 3fr;
+}
+
+.footer > .to-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 4%;
+    border-bottom: 0.5px solid #FBFBF2;
+    color: #E3E4DB;
+}
+
+.footer > .social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    
+}
+
+.footer > .social > button {
+    font-size: 2.5rem;
+    color: #CDDDDD;
+}
+
+.footer > .actions {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    color: #CDDDDD;
+};
+
